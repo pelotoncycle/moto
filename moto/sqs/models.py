@@ -292,7 +292,7 @@ class SQSBackend(BaseBackend):
                 if len(result) >= count:
                     break
 
-            if result or time.time() > polling_end:
+            if result or time.time() >= polling_end:
                 break
 
         return result
